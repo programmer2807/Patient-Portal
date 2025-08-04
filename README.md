@@ -28,19 +28,19 @@ This web application allows users to:
 ### 1. Clone the repository
 
 
-git clone https://github.com/your-username/patient-portal.git
+git clone https://github.com/programmer2807/patient-portal.git
 cd patient-portal
 
 2. Backend Setup
    cd backend
    npm install
    Create a .env file inside the backend directory with the following:
-    MONGODB_URI=your_mongodb_connection_string
+    MONGODB_URI=your_mongodb_connection_string ,, 
     PORT=5000
 
 3. Frontend Setup
      cd ../frontend
-      npm install8
+      npm install
       npm start
 
 React app runs at: http://localhost:3000
