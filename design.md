@@ -90,7 +90,7 @@ Sends GET request to /documents/:id
 
 Backend fetches file path from MongoDB and returns the file
 
-5. Assumptions
+## Assumptions
 Only PDF files are supported
 
 Max file size assumed to be 5MB
