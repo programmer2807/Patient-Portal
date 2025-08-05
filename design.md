@@ -52,7 +52,7 @@ Flexible document-based structure, easy Mongoose integration, suitable for stori
   }
 }
 
-GET /api/documents
+### `GET /api/documents
 Description: List all documents
 
 Response:[
@@ -73,7 +73,9 @@ Description: Delete a document by ID
 Response:{
   "message": "File deleted successfully"
 }
-. Data Flow Description
+
+
+## 4.Data Flow Description
 File Upload Process:
 User selects a file on the frontend
 
@@ -90,7 +92,7 @@ Sends GET request to /documents/:id
 
 Backend fetches file path from MongoDB and returns the file
 
-## Assumptions
+## 5.Assumptions
 Only PDF files are supported
 
 Max file size assumed to be 5MB
