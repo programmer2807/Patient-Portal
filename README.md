@@ -41,15 +41,18 @@ This web application allows users to:
 
 ### 1. Clone the repository
 
-
+```bash
 git clone https://github.com/programmer2807/patient-portal.git
 cd patient-portal
+npm install
+```
 
 ### 2. Backend Setup
    -cd backend
    -npm install
    
 #### Create a .env file inside the backend directory with the following:
+
     -MONGODB_URI=your_mongodb_connection_string ,, 
     -PORT=5000
 
