@@ -37,9 +37,9 @@ Flexible document-based structure, easy Mongoose integration, suitable for stori
 
 ---
 
-## 3. API Specification
+## API Specification
 
-### `POST /api/documents/upload`  
+### `POST /api/documents/upload`
 - **Description:** Upload a PDF file  
 - **Request:** Form data with a `file` field  
 - **Response:**
@@ -51,56 +51,62 @@ Flexible document-based structure, easy Mongoose integration, suitable for stori
     "filename": "example.pdf"
   }
 }
+```
 
-### `GET /api/documents
-Description: List all documents
+---
 
-Response:[
+### `GET /api/documents`
+- **Description:** List all documents  
+- **Response:**
+```json
+[
   {
     "_id": "xyz",
     "filename": "example.pdf",
     "uploadDate": "2025-08-04"
   }
 ]
-GET /api/documents/:id
-Description: Download a specific document by ID
+```
 
-Response: Returns PDF as file download
+---
 
-DELETE /api/documents/:id
-Description: Delete a document by ID
+### `GET /api/documents/:id`
+- **Description:** Download a specific document by ID  
+- **Response:** Returns PDF as file download
 
-Response:{
+---
+
+### `DELETE /api/documents/:id`
+- **Description:** Delete a document by ID  
+- **Response:**
+```json
+{
   "message": "File deleted successfully"
 }
+```
 
+---
 
-## 4.Data Flow Description
-File Upload Process:
-User selects a file on the frontend
+## Data Flow Description
 
-Sends POST request to /documents/upload
+### File Upload Process:
+1. User selects a file on the frontend  
+2. Sends a `POST` request to `/api/documents/upload`  
+3. Backend saves the file to `/uploads` and metadata to MongoDB  
+4. Backend sends a confirmation response
 
-Backend saves file to /uploads and metadata to MongoDB
+### File Download Process:
+1. User triggers download on the frontend  
+2. Sends a `GET` request to `/api/documents/:id`  
+3. Backend fetches file path from MongoDB and returns the file
 
-Backend sends a confirmation response
+---
 
-File Download Process:
-User triggers download on frontend
+## Assumptions
 
-Sends GET request to /documents/:id
-
-Backend fetches file path from MongoDB and returns the file
-
-## 5.Assumptions
-Only PDF files are supported
-
-Max file size assumed to be 5MB
-
-No authentication or user roles implemented
-
-Local file system is used for simplicity
-
-CORS and basic error handling are implemented
-
-Single server setup used (no distributed system)
+- Only PDF files are supported  
+- Max file size assumed to be 5MB  
+- No authentication or user roles implemented  
+- Local file system is used for simplicity  
+- CORS and basic error handling are implemented  
+- Single server setup used (no distributed system)
