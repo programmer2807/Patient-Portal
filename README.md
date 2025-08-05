@@ -1,10 +1,35 @@
 # Patient Portal
 
-A full-stack **Patient Document Management System** that allows uploading, listing, downloading, and deleting PDF documents securely.
-
-Built using **React.js** for the frontend, **Express.js** for the backend, and **MongoDB** for persistent storage.
+A full-stack web application that allows patients to upload, view, download, and delete their medical documents (PDFs). Built with Node.js (Express) on the backend and React.js on the frontend. Documents are stored locally using Multer middleware.
 
 ---
+## Project Structure
+patient-portal/
+├── backend/
+│ ├── server.js
+│ ├── routes/
+│ └── uploads/
+├── frontend/
+│ ├── public/
+│ ├── src/
+│ └── package.json
+├── .gitignore
+└── README.md
+
+
+
+---
+
+## How to Run Locally
+
+### Prerequisites
+- Node.js and npm installed
+- Git installed
+
+### 1. Clone the Repository
+bash
+git clone https://github.com/programmer2807/patient-portal.git
+cd patient-portal
 
 ## Project Overview
 
@@ -31,14 +56,15 @@ This web application allows users to:
 git clone https://github.com/programmer2807/patient-portal.git
 cd patient-portal
 
-2. Backend Setup
-   cd backend
-   npm install
-   Create a .env file inside the backend directory with the following:
-    MONGODB_URI=your_mongodb_connection_string ,, 
-    PORT=5000
+### 2. Backend Setup
+   -cd backend
+   -npm install
+   
+#### Create a .env file inside the backend directory with the following:
+    -MONGODB_URI=your_mongodb_connection_string ,, 
+    -PORT=5000
 
-3. Frontend Setup
+### 3. Frontend Setup
      cd ../frontend
       npm install
       npm start
