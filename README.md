@@ -4,18 +4,7 @@ A full-stack web application that allows patients to upload, view, download, and
 
 ---
 ## Project Structure
-patient-portal/
-├── backend/
-│ ├── server.js
-│ ├── routes/
-│ └── uploads/
-├── frontend/
-│ ├── public/
-│ ├── src/
-│ └── package.json
-├── .gitignore
-└── README.md
-
+<pre> <code> ## Project Structure ``` patient-portal/ ├── backend/ │ ├── server.js │ ├── routes/ │ └── uploads/ ├── frontend/ │ ├── public/ │ └── src/ ├── package.json ├── .gitignore └── README.md ``` </code> </pre>
 
 
 ---
